@@ -33,7 +33,14 @@ android {
 }
 
 dependencies {
-
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+    implementation ("com.github.bumptech.glide:glide:4.13.2")
+    // Skip this if you don't want to use integration libraries or configure Glide.
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.13.2")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.8.0")
