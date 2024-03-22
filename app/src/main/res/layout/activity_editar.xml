@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <TextView
         android:id="@+id/tv_titol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="REGISTRARSE"
+        android:text="EDITAR USUARIO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.078"
-        app:layout_constraintHorizontal_bias="0.49"/>
+        app:layout_constraintVertical_bias="0.078"/>
     <View
         android:id="@+id/view_superior"
         android:layout_width="match_parent"
@@ -23,57 +22,57 @@
         app:layout_constraintStart_toStartOf="parent"
         android:background="#66778811"/>
     <TextView
-        android:id="@+id/tv_registrar_nombre"
+        android:id="@+id/tv_editar_nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NOMBRE"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view_superior"/>
     <TextView
-        android:id="@+id/tv_registrar_usuari"
+        android:id="@+id/tv_editar_usuari"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="EMAIL"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_registrar_nombre"/>
+        app:layout_constraintTop_toBottomOf="@id/et_editar_nombre"/>
     <TextView
-        android:id="@+id/tv_registrar_pass"
+        android:id="@+id/tv_editar_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CONTRASEÑA"
+        android:text="PASSWORD"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_registrar_usuari"/>
+        app:layout_constraintTop_toBottomOf="@id/et_editar_usuari"/>
     <EditText
-        android:id="@+id/et_registrar_nombre"
+        android:id="@+id/et_editar_nombre"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/rectangle"
-        app:layout_constraintLeft_toRightOf="@id/tv_registrar_nombre"
-        app:layout_constraintTop_toTopOf="@id/tv_registrar_nombre"
+        app:layout_constraintLeft_toRightOf="@id/tv_editar_nombre"
+        app:layout_constraintTop_toTopOf="@id/tv_editar_nombre"
         app:layout_constraintRight_toRightOf="parent"/>
     <EditText
-        android:id="@+id/et_registrar_usuari"
+        android:id="@+id/et_editar_usuari"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/rectangle"
-        app:layout_constraintLeft_toRightOf="@id/tv_registrar_usuari"
-        app:layout_constraintTop_toTopOf="@id/tv_registrar_usuari"
+        app:layout_constraintLeft_toRightOf="@id/tv_editar_usuari"
+        app:layout_constraintTop_toTopOf="@id/tv_editar_usuari"
         app:layout_constraintRight_toRightOf="parent"/>
     <EditText
-        android:id="@+id/et_registrar_password"
+        android:id="@+id/et_editar_password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/rectangle"
-        app:layout_constraintLeft_toRightOf="@id/tv_registrar_pass"
-        app:layout_constraintTop_toTopOf="@id/tv_registrar_pass"
+        app:layout_constraintLeft_toRightOf="@id/tv_editar_password"
+        app:layout_constraintTop_toTopOf="@id/tv_editar_password"
         app:layout_constraintRight_toRightOf="parent"/>
     <Button
         android:id="@+id/bt_registrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/bt_registrar"
-        android:onClick="postRegistrarUsuario"
+        android:text="EDITAR USUARIO"
+        android:onClick="postEditarUsuario"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_registrar_password"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_editar_password"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,7 +11,6 @@
         android:text="@string/edat_rv_layout"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
-
     <TextView
         android:id="@+id/tv_rv_edat"
         android:layout_width="wrap_content"
@@ -26,17 +25,14 @@
         android:layout_height="wrap_content"
         tools:text="Aqui el nom"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_edat"
-        />
+        app:layout_constraintTop_toBottomOf="@id/tv_edat" />
     <TextView
         android:id="@+id/tv_rv_cognom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Aqui el cognom"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_rv_nom"
-        />
-
+        app:layout_constraintTop_toBottomOf="@id/tv_rv_nom" />
     <ImageView
         android:id="@+id/iv_rv_usuari"
         android:layout_width="125dp"
@@ -44,6 +40,4 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/jquery" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

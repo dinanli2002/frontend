@@ -27,5 +27,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".usuarisrv.RegistroActivity"></activity>
+        <activity android:name=".usuarisrv.EditarActivity"></activity>
+        <activity android:name=".usuarisrv.TareaActivity"></activity>
+        <activity android:name=".usuarisrv.SignActivity"></activity>
     </application>
 </manifest>

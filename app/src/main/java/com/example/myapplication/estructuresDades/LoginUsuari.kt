@@ -1,3 +1,3 @@
 package com.example.myapplication.estructuresDades
 
-data class LoginUsuari(val nomLogin:String, val passLogin:String)
+data class LoginUsuari(val username:String, val password:String)
