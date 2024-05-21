@@ -3,105 +3,118 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="172dp"
-        android:layout_height="176dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.531"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/image" />
+    android:layout_height="match_parent"
+    android:background="#C2E69D">
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="194dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="4dp"
-        android:text="WOODLAND"
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CREAR TAREA"
         android:textColor="#FFFFFF"
-        android:textSize="34sp"
+        android:textSize="48sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.636"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="146dp" />
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/bottom_white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3">
-
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="305dp"
-            android:layout_height="127dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:id="@+id/textViewTitleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nombre:"
+            android:textColor="#C2E69D"
+            android:textSize="25sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.047"
-            app:srcCompat="@drawable/green_rectangle" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="305dp"
-            android:layout_height="127dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="70dp"/>
+        <TextView
+            android:id="@+id/textViewDescriptionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="descripción:"
+            android:textColor="#C2E69D"
+            android:textSize="25sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.952"
-            app:srcCompat="@drawable/green_rectangle" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="305dp"
-            android:layout_height="127dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="178dp"/>
+        <TextView
+            android:id="@+id/textViewMonedasLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="monedas:"
+            android:textColor="#C2E69D"
+            android:textSize="25sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.501"
-            app:srcCompat="@drawable/green_rectangle" />
-
-        <CheckBox
-            android:id="@+id/checkBox1"
-            android:layout_width="155dp"
-            android:layout_height="48dp"
-            android:text="Tarea 1"
-            android:textSize="20sp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="128dp"
-            tools:layout_editor_absoluteY="221dp" />
-
-        <CheckBox
-            android:id="@+id/checkBox2"
-            android:layout_width="156dp"
-            android:layout_height="51dp"
-            android:text="Tarea 1"
-            android:textSize="20sp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="128dp"
-            tools:layout_editor_absoluteY="52dp" />
-
-        <CheckBox
-            android:id="@+id/checkBox3"
-            android:layout_width="155dp"
-            android:layout_height="48dp"
-            android:text="Tarea 1"
-            android:textSize="20sp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="128dp"
-            tools:layout_editor_absoluteY="384dp" />
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="250dp"/>
+        <EditText
+            android:id="@+id/editTextTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_background"
+            android:ems="10"
+            android:inputType="text"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/textViewTitleLabel"
+            app:layout_constraintTop_toTopOf="@id/textViewTitleLabel"/>
+        <EditText
+            android:id="@+id/editTextDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textViewDescriptionLabel"
+            app:layout_constraintTop_toTopOf="@id/textViewDescriptionLabel"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"/>
+        <EditText
+            android:id="@+id/editTextMonedas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:ems="10"
+            android:inputType="number"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textViewMonedasLabel"
+            app:layout_constraintTop_toTopOf="@id/textViewMonedasLabel"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"/>
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="123dp"
+            android:layout_height="45dp"
+            android:background="@drawable/custom_button_background"
+            android:text="Enviar"
+            android:textColor="#FFFFFF"
+            app:iconTint="#FFE2E2"
+            app:strokeColor="#FF0000"
+            app:layout_constraintTop_toBottomOf="@id/editTextMonedas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="144dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

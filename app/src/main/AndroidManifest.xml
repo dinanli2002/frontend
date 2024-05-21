@@ -28,7 +28,11 @@
         </activity>
         <activity android:name=".usuarisrv.RegistroActivity"></activity>
         <activity android:name=".usuarisrv.EditarActivity"></activity>
-        <activity android:name=".usuarisrv.TareaActivity"></activity>
         <activity android:name=".usuarisrv.SignActivity"></activity>
+        <activity android:name=".usuarisrv.CreateTutor"></activity>
+        <activity android:name=".usuarisrv.CreateKid"></activity>
+        <activity android:name=".usuarisrv.PaginaPrincipal"></activity>
+        <activity android:name=".usuarisrv.SaveTerea"></activity>
+        <activity android:name=".usuarisrv.TereaActivity"></activity>
     </application>
 </manifest>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C2E69D"
+    android:backgroundTint="#C2E69D"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="172dp"
+        android:layout_height="176dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="194dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="4dp"
+        android:text="WOODLAND"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bottom_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="155dp"
+            android:layout_height="80dp"
+            android:background="@drawable/custom_button_background"
+            android:onClick="postCreateTerea"
+            android:text="Crear Tarea"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:iconTint="#FFE2E2"
+            app:strokeColor="#FF0000"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="155dp"
+            android:layout_height="80dp"
+            android:background="@drawable/custom_button_background"
+            android:text="Crear Premio"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:iconTint="#FFE2E2"
+            app:strokeColor="#FF0000"
+            app:layout_constraintTop_toBottomOf="@id/button1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="155dp"
+            android:layout_height="80dp"
+            android:background="@drawable/custom_button_background"
+            android:text="Crear Niño"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:iconTint="#FFE2E2"
+            app:strokeColor="#FF0000"
+            app:layout_constraintTop_toBottomOf="@id/button2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="155dp"
+            android:layout_height="80dp"
+            android:background="@drawable/custom_button_background"
+            android:text="Modificar Tarea"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:iconTint="#FFE2E2"
+            app:strokeColor="#FF0000"
+            app:layout_constraintTop_toBottomOf="@id/button3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="155dp"
+            android:layout_height="80dp"
+            android:background="@drawable/custom_button_background"
+            android:text="Modificar Premio"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:iconTint="#FFE2E2"
+            app:strokeColor="#FF0000"
+            app:layout_constraintTop_toBottomOf="@id/button4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
