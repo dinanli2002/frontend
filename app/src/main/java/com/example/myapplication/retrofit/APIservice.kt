@@ -1,11 +1,12 @@
 package com.example.myapplication.retrofit
 
-import com.example.myapplication.estructuresDades.CreateTutor
 import com.example.myapplication.estructuresDades.RegistroUsuari
 import com.example.myapplication.estructuresDades.Usuari
 import com.example.myapplication.estructuresDades.EditarUsuari
 import com.example.myapplication.estructuresDades.LoginUsuari
 import com.example.myapplication.estructuresDades.CreateKid
+import com.example.myapplication.estructuresDades.Task
+import com.example.myapplication.estructuresDades.TaskResponse
 import com.example.myapplication.estructuresDades.createTask
 import okhttp3.RequestBody
 import retrofit2.Response
@@ -26,17 +27,17 @@ interface APIservice {
     @GET
     suspend fun getUsuaris(@Url url:String):Response<List<Usuari>>
     @Headers("Accept:application/json","Content-Type:application/json")
-    @POST("{ruta}/create/usuario")
+    @POST("{ruta}/create/userTutor")
     suspend fun postRegistro(@Path("ruta") ruta:String, @Body registroUsuari: RegistroUsuari):Response<Usuari>
     @FormUrlEncoded
     @POST("oauth/token")
     suspend fun postLogin(@Field("username") username: String, @Field("password") password: String, @Field("grant_type") grantType: String = "password"):Response<LoginUsuari>
     @PUT("{ruta}/update/usuario/6")
     suspend fun putEditar(@Path("ruta") ruta: String, @Body editarUsuari: EditarUsuari):Response<Usuari>
-    @POST("{ruta}/create/userTutor")
-    suspend fun postCreateTutor(@Path("ruta") ruta:String,@Body createTutor:CreateTutor):Response<Usuari>
     @POST("{ruta}/create/userKid")
     suspend fun postCreateKid(@Path("ruta") ruta:String,@Body createKid:CreateKid):Response<Usuari>
-    @POST("{ruta}/task/create")
-    suspend fun postCreateTask(@Path("ruta") ruta:String,@Body createTask: createTask):Response<Usuari>
+    @POST("{ruta}/task/create/1")
+    suspend fun postCreateTask(@Path("ruta") ruta:String,@Body createTask: createTask):Response<TaskResponse>
+    @PUT("{ruta}/rewards/tutor")
+    suspend fun put(@Path("ruta") ruta: String)
 }

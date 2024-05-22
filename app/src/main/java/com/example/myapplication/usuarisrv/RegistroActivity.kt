@@ -3,10 +3,8 @@ package com.example.myapplication.usuarisrv
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myapplication.MainActivity
 import com.example.myapplication.R
 import com.example.myapplication.estructuresDades.RegistroUsuari
 import com.example.myapplication.estructuresDades.Rutes
@@ -24,11 +22,6 @@ class RegistroActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.registro)
-        val buttonClick = findViewById<Button>(R.id.registro)
-        buttonClick.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
     }
     fun postRegistrarUsuario(view: View) {
         val inputName = findViewById<EditText>(R.id.editTextTextUsername)
@@ -46,6 +39,7 @@ class RegistroActivity : AppCompatActivity(){
             var resposta = con.create(APIservice::class.java).postRegistro("api", RegistroUsuari(username, email, password))
             if(resposta.isSuccessful){
                 println("la resposta!");
+                startActivity(Intent(this@RegistroActivity, PaginaPrincipal::class.java))
                 var usuari = resposta.body()?: Usuari("","",-1,"")
                 if(usuari.edat<0){
                     println("Login incorrecte")

@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.estructuresDades.Rutes
 import com.example.myapplication.estructuresDades.Usuari
 import com.example.myapplication.retrofit.APIservice
-import com.example.myapplication.usuarisrv.CreateTutor
 import com.example.myapplication.usuarisrv.EditarActivity
 import com.example.myapplication.usuarisrv.PaginaPrincipal
 import com.example.myapplication.usuarisrv.RegistroActivity
@@ -33,6 +32,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+    }
+    fun goToRegistro(view: View) {
+        val intent = Intent(this, RegistroActivity::class.java)
+        startActivity(intent)
     }
         fun postLoginUsuari(view: View) {
             val inputLogin = findViewById<EditText>(R.id.editTextTextPassword)
@@ -78,79 +81,9 @@ class MainActivity : AppCompatActivity() {
             editor.putString("access_token", token)
             editor.apply()
         }
-
         // Función para obtener el token de SharedPreferences
         private fun getTokenFromStorage(context: Context): String? {
             val sharedPreferences: SharedPreferences = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
             return sharedPreferences.getString("access_token", null)
         }
     }
-        /*val buttonClick = findViewById<Button>(R.id.bt_login)
-        buttonClick.setOnClickListener {
-            val intent = Intent(this, RegistroActivity::class.java)
-            startActivity(intent)
-        }*/
-        /*val buttonC = findViewById<Button>(R.id.bt_editar)
-        buttonC.setOnClickListener {
-            val intent = Intent(this, EditarActivity::class.java)
-            startActivity(intent)
-        }*/
-        /*val buttonA = findViewById<Button>(R.id.button)
-        buttonA.setOnClickListener {
-            val intent = Intent(this, SignActivity::class.java)
-            startActivity(intent)
-        }*/
-        /*val buttonD = findViewById<Button>(R.id.creartutor)
-        buttonD.setOnClickListener {
-            val intent = Intent(this, CreateTutor::class.java)
-            startActivity(intent)
-        }*/
-        var usuaris:Array<String> = Array(4){
-            ""+it.toString();
-        }
-       /* for (valor in usuaris){
-            println(valor)
-        }*/
-
-/*fun openUsuarisActivity(view: View) {
-    val input = findViewById<EditText>(R.id.et_usuari)
-    val nom_usuari = input.text
-    if (nom_usuari.isNotEmpty()) {
-        val intent = Intent(this, UsuarisActivity::class.java)
-        intent.putExtra("NOM_PARAMETRE", nom_usuari)
-        startActivity(intent)
-    } else {
-        Toast.makeText(this, "Indica un nom d'usuari", Toast.LENGTH_SHORT).show()
-    }
-}*/
-
-/*fun postLoginUsuari(view: View) {
-    val inputLogin = findViewById<EditText>(R.id.editTextTextPassword)
-    val inputPass = findViewById<EditText>(R.id.editTextTextEmailAddress)
-    val nomLogin = inputLogin.text.toString()
-    val passLogin = inputPass.text.toString()
-    CoroutineScope(Dispatchers.IO).launch {
-        val interceptor = HttpLoggingInterceptor()
-        interceptor.level = HttpLoggingInterceptor.Level.BODY
-        val client = OkHttpClient.Builder().addInterceptor(interceptor).build()
-        val con = Retrofit.Builder().baseUrl(Rutes.baseUrl)
-            .addConverterFactory(GsonConverterFactory.create()).client(client).build()
-        val username: RequestBody =
-            nomLogin.toRequestBody("multipart/form-data".toMediaTypeOrNull())
-        val password: RequestBody =
-            passLogin.toRequestBody("multipart/form-data".toMediaTypeOrNull())
-        var resposta = con.create(APIservice::class.java).postLogin(username, password)
-        if (resposta.isSuccessful) {
-            println("la resposta!");
-            var usuari = resposta.body() ?: Usuari("", "", -1, "")
-            if (usuari.edat < 0) {
-                println("Login incorrecte")
-            } else {
-                println("Login correcte")
-            }
-            println(resposta.body())
-        } else {
-            println(resposta.errorBody()?.string())
-        }
-    }
-}*/
