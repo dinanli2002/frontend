@@ -14,4 +14,7 @@ class PaginaPrincipal : AppCompatActivity() {
     fun postCreateTerea(view: View){
         startActivity(Intent(this@PaginaPrincipal, TereaActivity::class.java))
     }
+    fun putModifyTask(view: View){
+        startActivity(Intent(this@PaginaPrincipal, ModifyActivity::class.java))
+    }
 }

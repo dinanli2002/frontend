@@ -16,9 +16,6 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".UsuarisActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -29,10 +26,10 @@
         <activity android:name=".usuarisrv.RegistroActivity"></activity>
         <activity android:name=".usuarisrv.EditarActivity"></activity>
         <activity android:name=".usuarisrv.SignActivity"></activity>
-        <activity android:name=".usuarisrv.CreateTutor"></activity>
         <activity android:name=".usuarisrv.CreateKid"></activity>
         <activity android:name=".usuarisrv.PaginaPrincipal"></activity>
         <activity android:name=".usuarisrv.SaveTerea"></activity>
         <activity android:name=".usuarisrv.TereaActivity"></activity>
+        <activity android:name=".usuarisrv.ModifyActivity"></activity>
     </application>
 </manifest>

@@ -38,6 +38,6 @@ interface APIservice {
     suspend fun postCreateKid(@Path("ruta") ruta:String,@Body createKid:CreateKid):Response<Usuari>
     @POST("{ruta}/task/create/1")
     suspend fun postCreateTask(@Path("ruta") ruta:String,@Body createTask: createTask):Response<TaskResponse>
-    @PUT("{ruta}/rewards/tutor")
-    suspend fun put(@Path("ruta") ruta: String)
+    @GET("{ruta}/task/tutor")
+    suspend fun getModifyTask(@Path("ruta") ruta: String):Response<List<Task>>
 }
