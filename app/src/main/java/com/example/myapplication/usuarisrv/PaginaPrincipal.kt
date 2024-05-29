@@ -17,4 +17,7 @@ class PaginaPrincipal : AppCompatActivity() {
     fun putModifyTask(view: View){
         startActivity(Intent(this@PaginaPrincipal, ModifyActivity::class.java))
     }
+    fun postCreateKid(view: View){
+        startActivity(Intent(this@PaginaPrincipal, CreateKid::class.java))
+    }
 }

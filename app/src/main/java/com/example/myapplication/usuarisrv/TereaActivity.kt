@@ -29,9 +29,11 @@ class TereaActivity : AppCompatActivity() {
         val inputNombre = findViewById<EditText>(R.id.editTextTitle)
         val inputDescripcion = findViewById<EditText>(R.id.editTextDescription)
         val inputmonedas = findViewById<EditText>(R.id.editTextMonedas)
+        val userIdInput = findViewById<EditText>(R.id.editTextUserId)
         val nombre = inputNombre.text.toString()
         val description = inputDescripcion.text.toString()
         val monedas = inputmonedas.text.toString().toInt()
+        val userId = userIdInput.text.toString().toInt()
         val token =getTokenFromStorage(this@TereaActivity)
         CoroutineScope(Dispatchers.IO).launch {
             val interceptor = HttpLoggingInterceptor()
@@ -53,7 +55,7 @@ class TereaActivity : AppCompatActivity() {
                 .client(client)
                 .build()
             val service = retrofit.create(APIservice::class.java)
-            val response = service.postCreateTask("api", createTask(nombre,description,monedas))
+            val response = service.postCreateTask("api", userId, createTask(nombre,description,monedas))
             if (response.isSuccessful){
                 val task = response.body()?.task
                 if (task != null) {

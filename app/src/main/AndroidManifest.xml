@@ -31,5 +31,6 @@
         <activity android:name=".usuarisrv.SaveTerea"></activity>
         <activity android:name=".usuarisrv.TereaActivity"></activity>
         <activity android:name=".usuarisrv.ModifyActivity"></activity>
+        <activity android:name=".usuarisrv.VerificateTarea"></activity>
     </application>
 </manifest>

@@ -8,6 +8,7 @@ import com.example.myapplication.estructuresDades.CreateKid
 import com.example.myapplication.estructuresDades.Task
 import com.example.myapplication.estructuresDades.TaskResponse
 import com.example.myapplication.estructuresDades.createTask
+import com.example.myapplication.usuarisrv.VerificateTarea
 import okhttp3.RequestBody
 import retrofit2.Response
 import retrofit2.http.Body
@@ -32,12 +33,16 @@ interface APIservice {
     @FormUrlEncoded
     @POST("oauth/token")
     suspend fun postLogin(@Field("username") username: String, @Field("password") password: String, @Field("grant_type") grantType: String = "password"):Response<LoginUsuari>
-    @PUT("{ruta}/update/usuario/6")
-    suspend fun putEditar(@Path("ruta") ruta: String, @Body editarUsuari: EditarUsuari):Response<Usuari>
+    @PUT("{ruta}/update/usuario/{id}")
+    suspend fun putEditar(@Path("ruta") ruta: String, @Path("id") id: Int, @Body editarUsuari: EditarUsuari):Response<Usuari>
     @POST("{ruta}/create/userKid")
     suspend fun postCreateKid(@Path("ruta") ruta:String,@Body createKid:CreateKid):Response<Usuari>
-    @POST("{ruta}/task/create/1")
-    suspend fun postCreateTask(@Path("ruta") ruta:String,@Body createTask: createTask):Response<TaskResponse>
+    @POST("{ruta}/task/create/{id}")
+    suspend fun postCreateTask(@Path("ruta") ruta:String,@Path("id") id: Int,@Body createTask: createTask):Response<TaskResponse>
     @GET("{ruta}/task/tutor")
     suspend fun getModifyTask(@Path("ruta") ruta: String):Response<List<Task>>
+    @PUT("{ruta}/task")
+    suspend fun putEditTask(@Path("ruta") ruta: String):Response<List<Task>>
+    @POST("{ruta}/task/verificate/1")
+    suspend fun postVericateTask(@Path("ruta") ruta: String):Response<TaskResponse>
 }

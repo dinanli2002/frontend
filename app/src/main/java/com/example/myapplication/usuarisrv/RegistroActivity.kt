@@ -25,8 +25,8 @@ class RegistroActivity : AppCompatActivity(){
     }
     fun postRegistrarUsuario(view: View) {
         val inputName = findViewById<EditText>(R.id.editTextTextUsername)
-        val inputLogin = findViewById<EditText>(R.id.editTextTextPassword)
-        val inputPass = findViewById<EditText>(R.id.editTextTextEmailAddress)
+        val inputLogin = findViewById<EditText>(R.id.editTextTextEmailAddress)
+        val inputPass = findViewById<EditText>(R.id.editTextTextPassword)
         val username = inputName.text.toString()
         val email = inputLogin.text.toString()
         val password = inputPass.text.toString()
