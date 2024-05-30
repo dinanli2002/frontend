@@ -12,9 +12,7 @@ class TereaRvAdapter (private val task:List<Task>) :RecyclerView.Adapter<TereaVi
     private var clickListener:ClickListener?=null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TereaViewHolder {
         val layoutInflate = LayoutInflater.from(parent.context)
-        return TereaViewHolder(layoutInflate.inflate(R.layout.item_task, parent, false),
-            clickListener)
-
+        return TereaViewHolder(layoutInflate.inflate(R.layout.item_task, parent, false), clickListener)
     }
 
     override fun getItemCount(): Int {
@@ -23,34 +21,21 @@ class TereaRvAdapter (private val task:List<Task>) :RecyclerView.Adapter<TereaVi
 
     override fun onBindViewHolder(holder: TereaViewHolder, position: Int) {
         holder.printTerea(task[position])
+        //holder.bind(task)
+        val item = task[position]
         val data =task?.get(position)
-        data?.let { holder.bindClickBtnMark("data.nombre")}
-
-
+        data?.let{holder.bindClickBtnMark(item)}
     }
+    /*override fun onBindViewHolder1(holder: TereaViewHolder, position: Int) {
+        holder.printTerea(task[position])
+        val data = task?.get(position)
+        data?.let{holder.bind2ClickBtnDelete("delete")}
+    }*/
 
     fun setOnItemClickListener(clickListener:ClickListener){
         this.clickListener=clickListener
     }
-//    inner class MyViewHolder(v:View):RecyclerView.ViewHolder(v),View.OnClickListener{
-//        private val but1 = v.findViewById(R.id.btnMark) as Button
-//        init{
-//            if(clickListener!=null){
-//                println("Init")
-//                itemView.setOnClickListener(this)
-//            }
-//        }
-//        fun bindItems(data:String){
-//            but1.text=data
-//        }
-//
-//        override fun onClick(v: View?) {
-//            println("onclick TareaRVAdapter")
-//            if(v!=null){
-//                clickListener?.onItemClick(v,adapterPosition)
-//            }
-//        }
-//    }
+
 interface ClickListener{
     fun onItemClick(v:View,position: Int)
 }
