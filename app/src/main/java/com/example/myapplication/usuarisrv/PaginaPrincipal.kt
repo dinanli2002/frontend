@@ -20,4 +20,7 @@ class PaginaPrincipal : AppCompatActivity() {
     fun postCreateKid(view: View){
         startActivity(Intent(this@PaginaPrincipal, CreateKid::class.java))
     }
+    fun putEditarUsuario(view: View){
+        startActivity(Intent(this@PaginaPrincipal, EditarActivity::class.java))
+    }
 }
